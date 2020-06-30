@@ -13,7 +13,8 @@ public class BaseClass {
 
     @Before
     public void start() {
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/mac/chromedriver");
+//        System.setProperty("webdriver.chrome.driver", "src/main/resources/mac/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/linux/chromedriver");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.get("https://google.com");
