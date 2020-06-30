@@ -23,7 +23,7 @@ public class BaseClass {
 //        chromeOptions.addArguments("--disable-infobars");
         chromeOptions.addArguments("--no-sandbox");
         chromeOptions.addArguments("--headless");
-        chromeOptions.addArguments("window-size=1024,768\"");
+        chromeOptions.addArguments("window-size=1024,768");
 
         driver = new ChromeDriver(chromeOptions);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
