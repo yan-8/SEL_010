@@ -18,9 +18,9 @@ public class BaseClass {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/linux/chromedriver");
 
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--disable-extensions");
-        chromeOptions.addArguments("--disable-gpu");
-        chromeOptions.addArguments("--disable-infobars");
+//        chromeOptions.addArguments("--disable-extensions");
+//        chromeOptions.addArguments("--disable-gpu");
+//        chromeOptions.addArguments("--disable-infobars");
         chromeOptions.addArguments("--no-sandbox");
 
         driver = new ChromeDriver(chromeOptions);
