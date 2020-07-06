@@ -18,14 +18,13 @@ public class BaseClass {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/linux/chromedriver");
 
         ChromeOptions chromeOptions = new ChromeOptions();
-//        chromeOptions.addArguments("--disable-extensions");
-//        chromeOptions.addArguments("--disable-gpu");
-
         chromeOptions.addArguments("--disable-infobars");
         chromeOptions.addArguments("--no-sandbox");
         chromeOptions.addArguments("--headless");
         chromeOptions.addArguments("window-size=1024,768");
 
+//        chromeOptions.addArguments("--disable-extensions");
+//        chromeOptions.addArguments("--disable-gpu");
         driver = new ChromeDriver(chromeOptions);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.get("https://google.com");
