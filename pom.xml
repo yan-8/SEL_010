@@ -30,6 +30,17 @@
             <version>2.13.3</version><!-- update up to 2.13.4 when "https://mvnrepository.com/artifact/io.qameta.allure/allure-junit4" here will be it version -->
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.30</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.30</version>
+        </dependency>
     </dependencies>
 
     <build>
