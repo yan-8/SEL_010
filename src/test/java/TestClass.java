@@ -28,4 +28,9 @@ public class TestClass extends BaseClass {
         }
         assertTrue("LESS THEN 101", result <=100);
     }
+
+    @Test
+    public void test4() {
+
+    }
 }
