@@ -31,6 +31,5 @@ public class TestClass extends BaseClass {
 
     @Test
     public void test4() {
-        System.out.println("Test 4 - Empty");
     }
 }
