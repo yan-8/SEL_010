@@ -1,16 +1,13 @@
 import org.apache.commons.io.FileUtils;
-import org.apache.tika.io.FilenameUtils;
 import org.junit.Test;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import java.io.File;
 import java.io.IOException;
-
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 import static utils.Utils.getTimestamp;
 import static io.qameta.allure.Allure.addAttachment;
-//import static io.qameta.allure.Attachment.*;
 
 public class TestClass extends BaseClass {
     @Test
@@ -19,11 +16,12 @@ public class TestClass extends BaseClass {
         resultAllPage = homePage.search("сокиабле");
         assertTrue(resultAllPage.getTitleFromFirstLink().contains("Сокиабле"));
 
-//        makeScreenshotOnFailure(driver);
-
+        // make screenshot (only visible part of page in browser)
         File screenshotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(screenshotFile, new File("src/test/resources/screenshots/Screenshot - " + getTimestamp("yyyy.MM.dd - HH.mm.ss") + ".png"));
-        addAttachment("Scrrr", FileUtils.openInputStream(screenshotFile));
+
+        // add screenshot on demand for Allure (only visible part of page in browser)
+        addAttachment("Screenshot on demand", FileUtils.openInputStream(screenshotFile));
     }
 
     @Test
@@ -45,8 +43,8 @@ public class TestClass extends BaseClass {
         assertTrue("LESS THEN 101", result <=100);
     }
 
-    @Test
-    public void test4() {
-
-    }
+//    @Test
+//    public void test4() {
+//
+//    }
 }
