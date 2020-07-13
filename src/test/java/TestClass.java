@@ -4,10 +4,10 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import java.io.File;
 import java.io.IOException;
+import io.qameta.allure.Allure;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 import static utils.Utils.getTimestamp;
-import static io.qameta.allure.Allure.addAttachment;
 
 public class TestClass extends BaseClass {
     @Test
@@ -20,8 +20,8 @@ public class TestClass extends BaseClass {
         File screenshotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(screenshotFile, new File("src/test/resources/screenshots/Screenshot - " + getTimestamp("yyyy.MM.dd - HH.mm.ss") + ".png"));
 
-        // add screenshot on demand for Allure (only visible part of page in browser)
-        addAttachment("Screenshot on demand", FileUtils.openInputStream(screenshotFile));
+        // add screenshot for Allure attachments on demand (only visible part of page in browser)
+        Allure.addAttachment("SCREENSHOT ON DEMAND", FileUtils.openInputStream(screenshotFile));
     }
 
     @Test
@@ -45,6 +45,5 @@ public class TestClass extends BaseClass {
 
 //    @Test
 //    public void test4() {
-//
 //    }
 }
