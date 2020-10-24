@@ -13,8 +13,8 @@ public class BaseClass {
 
     @Before
     public void start() {
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/mac/chromedriver");
-//        System.setProperty("webdriver.chrome.driver", "src/main/resources/linux/chromedriver");
+//        System.setProperty("webdriver.chrome.driver", "src/main/resources/mac/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/linux/chromedriver");
 
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--disable-infobars");
